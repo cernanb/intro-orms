@@ -2,7 +2,7 @@ require 'bundler'
 Bundler.require
 
 DB = {
-  conn: SQLite3::Database.new('db/twitter.db')
+  conn: SQLite3::Database.new('db/twitters.db')
 }
 
 DB[:conn].results_as_hash = true

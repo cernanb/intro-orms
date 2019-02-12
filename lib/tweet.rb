@@ -1,14 +1,14 @@
 class Tweet
   attr_accessor :message, :username
-  ALL = []
+  @@all = []
 
   def self.all
-    ALL
+    @@all
   end
 
   def initialize(props={})
     @message = props['message']
     @username = props['username']
-    ALL << self
+    @@all << self
   end
 end

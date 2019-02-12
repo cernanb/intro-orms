@@ -10,14 +10,15 @@ class TweetsApp
       puts 'Enter a message:'
       message = gets.chomp
 
+      puts ""
       tweet = Tweet.new({'username' => username, 'message' => message})
 
       tweets = Tweet.all
       render(tweets)
+      puts ""
     end
   end
 
-  private
 
   def render(tweets)
     tweets.each.with_index(1) do |tweet, i|
